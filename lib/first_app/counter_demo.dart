@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutterstudyapp/first_app/route_demo.dart';
 
-class MyHomePage extends StatefulWidget {
+class CounterDemoPage extends StatefulWidget {
   final String title;
 
-  MyHomePage({Key key, this.title}) : super(key: key);
+  CounterDemoPage({Key key, this.title}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _CounterDemoPageState createState() => _CounterDemoPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _CounterDemoPageState extends State<CounterDemoPage> {
   int _counter = 0;
 
   void _incrementCounter() {
@@ -30,14 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
             new Text("$_counter", style: Theme.of(context).textTheme.headline4)
           ])),
       floatingActionButton: FloatingActionButton(
-//        onPressed: _incrementCounter,
-        onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return new Router(routerDelegate: RouterDelegate(){
-
-            });
-          }));
-        },
+        onPressed: _incrementCounter,
         tooltip: "Increment",
         child: new Icon(Icons.add),
       ),
