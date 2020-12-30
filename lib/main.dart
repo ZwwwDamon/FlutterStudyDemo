@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterstudyapp/first_app/route_demo.dart';
 
 import 'first_app/counter_demo.dart';
-import 'first_app/counter_demo.dart';
-import 'first_app/route_demo.dart';
-import 'first_app/route_demo.dart';
-import 'first_app/route_demo.dart';
-import 'first_app/route_demo.dart';
+import 'first_app/package_manager_demo.dart';
 import 'first_app/route_demo.dart';
 
 void main() {
@@ -22,7 +18,8 @@ class MyApp extends StatelessWidget {
         routes: {
           "home_page": (context) => HomeDemoPage(),
           "counter_demo": (context) => CounterDemoPage(),
-          "route_demo": (context) => RouteDemoPage()
+          "route_demo": (context) => RouteDemoPage(),
+          "package_manager_demo": (context) => PackageDemoPage()
         },
         onGenerateRoute: (RouteSettings settings) {
           return MaterialPageRoute(builder: (context) {
@@ -81,7 +78,12 @@ class HomeDemoPage extends StatelessWidget {
                 Navigator.pushNamed(context, "route_demo");
               },
               child: Text("打开路由示例页"),
-            )
+            ),
+            FlatButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, "package_manager_demo");
+                },
+                child: Text("打开包管理示例"))
           ],
         ),
       ),
