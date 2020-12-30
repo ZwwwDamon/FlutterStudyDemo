@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterstudyapp/first_app/route_demo.dart';
 
 class CounterDemoPage extends StatefulWidget {
-  final String title;
-
-  CounterDemoPage({Key key, this.title}) : super(key: key);
-
   @override
   _CounterDemoPageState createState() => _CounterDemoPageState();
 }
@@ -21,8 +16,10 @@ class _CounterDemoPageState extends State<CounterDemoPage> {
 
   @override
   Widget build(BuildContext context) {
+    //获取路由参数
+    var title = ModalRoute.of(context).settings.arguments;
     return Scaffold(
-      appBar: AppBar(title: new Text(widget.title)),
+      appBar: AppBar(title: new Text(title)),
       body: new Center(
           child: new Column(
               mainAxisAlignment: MainAxisAlignment.center,
