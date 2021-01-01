@@ -9,21 +9,21 @@ class StateManagerDemoPage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            FlatButton(
+            RaisedButton(
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return SelfManagerWidget();
                   }));
                 },
                 child: Text("进入Widget管理自身状态示例页")),
-            FlatButton(
+            RaisedButton(
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return FatherManagerWidget();
                   }));
                 },
                 child: Text("进入父Widget管理子Widget状态示例页")),
-            FlatButton(
+            RaisedButton(
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return MixManagerWidget();

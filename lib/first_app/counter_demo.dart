@@ -24,7 +24,7 @@ class _CounterDemoPageState extends State<CounterDemoPage> {
           child: new Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-            new Text("You have pushed the button this many times:"),
+            new Text("点击右下方按钮可让数字自增"),
             new Text("$_counter", style: Theme.of(context).textTheme.headline4)
           ])),
       floatingActionButton: FloatingActionButton(

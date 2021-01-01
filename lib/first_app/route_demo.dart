@@ -18,7 +18,7 @@ class RouteDemoPageState extends State<RouteDemoPage> {
         body: Center(
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          FlatButton(
+          RaisedButton(
             child: Text("打开新路由并传参：$argument"),
             onPressed: () async {
               //这里不用命名路由的方式来打开
@@ -48,7 +48,7 @@ class NewRoutePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text("传入的参数是：$argument"),
-            FlatButton(
+            RaisedButton(
                 onPressed: () {
                   Navigator.of(context).pop(returnStr);
                 },
@@ -72,7 +72,7 @@ class BlockRoutePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("假设这是个登录页，点击下面的登录按钮才能进入接收参数的路由页面"),
-            FlatButton(
+            RaisedButton(
                 onPressed: () {
                   //伪代码
                   isLogin = true;
